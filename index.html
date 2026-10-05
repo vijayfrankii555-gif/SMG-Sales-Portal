@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMG Sales Review — Oct'26</title>
+<link rel="stylesheet" href="style.css">
+<meta name="color-scheme" content="light"><style>body{overflow:hidden}</style></head>
+<body>
+
+<div id="app">
+  <div class="ambient a1"></div><div class="ambient a2"></div>
+
+  <header class="topbar">
+    <div class="brand">SHANMUGA MODERN RICE MILL</div>
+    <div class="meeting">மாதாந்திர விற்பனை ஆய்வுக் கூட்டம் · Oct'26</div>
+    <div class="timer" id="timer">30:00</div>
+  </header>
+
+  <main id="slides">
+
+    <!-- 0 OPENING -->
+    <section class="slide active opening" data-minutes="1">
+      <div class="hero">
+        <div class="eyebrow">SHANMUGA MODERN RICE MILL</div>
+        <h1>மாதாந்திர விற்பனை<br>ஆய்வுக் கூட்டம்</h1>
+        <p class="en">Monthly Sales Review Meeting</p>
+        <p class="date">அக்டோபர் 2026</p>
+        <button class="primary" id="startBtn">▶ Presentation தொடங்கவும்</button>
+        <div class="hint">← → Navigation · F Full Screen · Space Next · P Pause</div>
+      </div>
+    </section>
+
+    <!-- 1 BUSINESS SUMMARY -->
+    <section class="slide" data-minutes="5">
+      <div class="slide-head">
+        <div><span class="kicker">01</span><h2>வணிக செயல்திறன் சுருக்கம்</h2><p>Business Performance Summary · Apr'26 – Sep'26</p></div>
+      </div>
+      <div class="kpi-grid">
+        <div class="kpi blue"><span>மொத்த விற்பனை</span><strong data-count="190" data-prefix="₹" data-suffix=" L">0</strong><small>6-மாத சராசரி · ₹1.90 Cr</small></div>
+        <div class="kpi green"><span>மொத்த வாடிக்கையாளர்கள்</span><strong data-count="14055">0</strong><small>6-மாத சராசரி</small></div>
+        <div class="kpi purple"><span>புதிய வாடிக்கையாளர்கள்</span><strong data-count="2530">0</strong><small>6-மாத சராசரி</small></div>
+        <div class="kpi orange"><span>மொத்த பில்கள்</span><strong data-count="16535">0</strong><small>6-மாத சராசரி</small></div>
+      </div>
+      <div class="chart-card">
+        <div class="chart-title"><b>6 மாத விற்பனை போக்கு</b><span>Sales Trend · ₹ Cr</span></div>
+        <div class="line-chart" id="salesChart"></div>
+        <div class="axis" id="salesAxis"></div>
+      </div>
+      <div class="insight"><b>முக்கிய நிலவரம்:</b> Apr–Jun steady growth · Jul peak · Aug correction · Sep recovery தேவை.</div>
+    </section>
+
+    <!-- 2 TREND -->
+    <section class="slide" data-minutes="6">
+      <div class="slide-head"><div><span class="kicker">02</span><h2>6 மாத விற்பனை போக்கு & முக்கிய மாற்றங்கள்</h2><p>6-Month Trend Analysis</p></div></div>
+      <div class="trend-layout">
+        <div class="big-chart chart-card">
+          <div class="chart-title"><b>மாத வாரியான விற்பனை</b><span>₹ Crore</span></div>
+          <div class="bars" id="salesBars"></div>
+        </div>
+        <div class="trend-side">
+          <div class="trend-card peak"><span>🚀 உச்ச மாதம்</span><b>July'26</b><strong>₹2.39 Cr</strong><small>Sales + Customers + New Customers + Bills — all peak</small></div>
+          <div class="trend-card"><span>August'26</span><b>₹2.07 Cr</b><small>July-யிலிருந்து Sales ↓ 13.4%</small></div>
+          <div class="trend-card alert"><span>September'26</span><b>₹1.70 Cr</b><small>August-யிலிருந்து Sales ↓ 17.9%</small></div>
+        </div>
+      </div>
+      <div class="mini-grid">
+        <div><span>Sep Customers</span><b>12,877</b><small>Aug 15,265 → ↓15.6%</small></div>
+        <div><span>Sep New Customers</span><b>2,318</b><small>Aug 2,748 → ↓15.7%</small></div>
+        <div><span>Sep Bills</span><b>15,149</b><small>Aug 17,959 → ↓15.6%</small></div>
+      </div>
+    </section>
+
+    <!-- 3 TARGET -->
+    <section class="slide" data-minutes="5">
+      <div class="slide-head"><div><span class="kicker">03</span><h2>6 மாத Target Achievement நிலவரம்</h2><p>6-Month Actual vs Target · Monthly target × 6</p></div></div>
+      <div class="achievement">
+        <div class="ach-card"><div><span>மொத்த விற்பனை</span><b>₹11.42 Cr / ₹15.00 Cr</b></div><strong class="pct" data-pct="76.13">0%</strong><div class="progress"><i style="--pct:76.13%"></i></div></div>
+        <div class="ach-card"><div><span>மொத்த வாடிக்கையாளர்கள்</span><b>84,328 / 1,20,000</b></div><strong class="pct" data-pct="70.27">0%</strong><div class="progress"><i style="--pct:70.27%"></i></div></div>
+        <div class="ach-card danger"><div><span>புதிய வாடிக்கையாளர்கள்</span><b>15,179 / 30,000</b></div><strong class="pct" data-pct="50.60">0%</strong><div class="progress"><i style="--pct:50.60%"></i></div></div>
+        <div class="ach-card"><div><span>தற்போதைய வாடிக்கையாளர்கள்</span><b>69,149 / 90,000</b></div><strong class="pct" data-pct="76.83">0%</strong><div class="progress"><i style="--pct:76.83%"></i></div></div>
+        <div class="ach-card warn"><div><span>மொத்த பில்கள்</span><b>99,209 / 1,50,000</b></div><strong class="pct" data-pct="66.14">0%</strong><div class="progress"><i style="--pct:66.14%"></i></div></div>
+      </div>
+      <div class="formula"><b>Formula:</b> 6-Month Achievement % = 6-Month Actual ÷ (Monthly Target × 6) × 100</div>
+      <div class="discussion"><b>Management Focus:</b> New Customer acquisition is the biggest gap · Billing frequency and repeat visits need recovery.</div>
+    </section>
+
+    <!-- 4 SHOPS -->
+    <section class="slide" data-minutes="5">
+      <div class="slide-head"><div><span class="kicker">04</span><h2>கடை வாரியான விற்பனை நிலவரம்</h2><p>Shop-Wise Sales Performance · 6 Months</p></div><div class="total-chip">18 SHOPS · ₹11.47 Cr</div></div>
+      <div class="top3">
+        <div class="top-card c1"><span>🥇 #1 TOP SHOP</span><b>மில் ஷாப்</b><strong>₹1.94 Cr</strong></div>
+        <div class="top-card c2"><span>🥈 #2 TOP SHOP</span><b>விநாயகபுரம்</b><strong>₹1.18 Cr</strong></div>
+        <div class="top-card c3"><span>🥉 #3 TOP SHOP</span><b>இளம்பிள்ளை</b><strong>₹1.17 Cr</strong></div>
+      </div>
+      <div class="shop-list" id="shopList"></div>
+      <div class="insight"><b>முக்கிய குறிப்பு:</b> Top 3 shops = ₹4.29 Cr · 6-மாத shop-wise sales-ல் 37.4%.</div>
+      <div class="source-note">குறிப்பு: Shop-wise detailed total ₹11.47 Cr; monthly summary values total ₹11.42 Cr (source-level rounding/precision difference).</div>
+    </section>
+
+
+    <!-- 5 FULL SALES DATA -->
+    <section class="slide full-data-slide" data-minutes="5">
+      <div class="slide-head">
+        <div>
+          <span class="kicker">05</span>
+          <h2>முழு கடை வாரியான விற்பனை தகவல்கள்</h2>
+          <p>April'26 – September'26 · 18 Shops · Monthly Sales · 6-Month Target · Variance</p>
+        </div>
+        <div class="total-chip white-chip">18 SHOPS</div>
+      </div>
+      <div class="full-data-card">
+        <div class="table-scroll">
+          <table class="full-sales-table">
+            <thead><tr>
+              <th>Rank</th><th class="name-col">மண்டி பெயர்</th>
+              <th>April</th><th>May</th><th>June</th><th>July</th><th>Aug</th><th>Sep</th>
+              <th>6M Actual</th><th>6M Target</th><th>Variance</th>
+            </tr></thead>
+            <tbody id="fullSalesBody"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="table-foot">
+        <span><b>Formula:</b> 6M Target = Monthly Target × 6</span>
+        <span>Variance = 6M Actual − 6M Target</span>
+      </div>
+    </section>
+
+    <!-- 5 26KG -->
+    <section class="slide" data-minutes="5">
+      <div class="slide-head"><div><span class="kicker">05</span><h2>26Kg அரிசி விற்பனை போக்கு</h2><p>Total Quantity Sale · Top 7 by month</p></div><div class="total-chip">Sep'26 · 7,561 Qty</div></div>
+      <div class="month-tabs" id="monthTabs"></div>
+      <div class="rice-panel">
+        <div class="rice-title"><b id="riceMonth">September'26</b><span id="riceTotal">7,561 Qty</span></div>
+        <div id="riceRows"></div>
+      </div>
+      <div class="six-total">
+        <div><span>April</span><b>10,067</b></div><div><span>May</span><b>9,704</b></div><div><span>June</span><b>10,218</b></div><div><span>July</span><b>13,710</b></div><div><span>August</span><b>9,989</b></div><div class="sel"><span>September</span><b>7,561</b></div>
+      </div>
+    </section>
+
+    <!-- 6 DISCUSSION -->
+    <section class="slide" data-minutes="3">
+      <div class="slide-head"><div><span class="kicker">06</span><h2>மேலாண்மை கலந்துரையாடல்</h2><p>Management Discussion & Action Points</p></div></div>
+      <div class="action-grid">
+        <div class="action"><span>01</span><h3>Sales Recovery</h3><p>September sales ₹1.70 Cr → next month recovery target fix செய்யவும்.</p></div>
+        <div class="action"><span>02</span><h3>New Customer Growth</h3><p>New customers achievement 50.60% — acquisition plan review.</p></div>
+        <div class="action"><span>03</span><h3>Shop Focus</h3><p>Low-performing shops-க்கு weekly sales action plan உருவாக்கவும்.</p></div>
+        <div class="action"><span>04</span><h3>26KG Product Mix</h3><p>High-moving brands stock availability & shop-wise push review.</p></div>
+      </div>
+      <div class="closing">
+        <div class="eyebrow">NEXT REVIEW</div>
+        <h2>“More Customers · More Sales · More Growth”</h2>
+        <p>Data → Discussion → Action → Follow-up</p>
+      </div>
+    </section>
+
+    <!-- 7 THANK YOU -->
+    <section class="slide closing-slide" data-minutes="0">
+      <div class="hero">
+        <div class="eyebrow">SHANMUGA MODERN RICE MILL</div>
+        <h1>நன்றி</h1>
+        <p class="en">Thank You</p>
+        <p class="date">Monthly Sales Review Meeting · Oct'26</p>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="controls">
+    <button id="prev">←</button>
+    <div class="counter"><b id="current">01</b> / <span id="total">08</span></div>
+    <button id="next">→</button>
+    <button id="pause">Ⅱ</button>
+    <button id="full">⛶</button>
+  </div>
+  <div class="progress-line"><i id="deckProgress"></i></div>
+</div>
+
+<script src="app.js"></script>
+
+<script>
+window.addEventListener('load',()=>{
+  setTimeout(()=>{
+    document.querySelectorAll('svg text').forEach(t=>{
+      t.setAttribute('fill','#111827');
+      t.style.fill='#111827';
+      t.style.opacity='1';
+      t.style.fontWeight='800';
+    });
+  },300);
+});
+</script>
+</body>
+</html>
